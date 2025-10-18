@@ -3,7 +3,7 @@ install:
 	pip install -r requirements.txt
 
 format:
-	black *.py
+	black . --exclude venv || true
 
 train:
 	python train.py
