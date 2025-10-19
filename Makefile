@@ -28,6 +28,7 @@ hf-login:
 	huggingface-cli login --token $(HF) --add-to-git-credential
 
 push-hub:
+	huggingface-cli upload Michel850101/Drug-Classification ./README.md README.md --repo-type=space --commit-message="Upload README"
 	huggingface-cli upload Michel850101/Drug-Classification ./app.py app.py --repo-type=space --commit-message="Upload app"
 	huggingface-cli upload Michel850101/Drug-Classification ./requirements.txt requirements.txt --repo-type=space --commit-message="Upload requirements"
 	huggingface-cli upload Michel850101/Drug-Classification ./Model --repo-type=space --commit-message="Sync Model"
